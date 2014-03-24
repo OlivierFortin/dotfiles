@@ -58,3 +58,8 @@ sudo easy_install Pygments
 # chrome canary as default
 # on a mac you can set chrome canary as your default inside of Safari preferences :)
 
+
+# install yeoman 
+npm install -g yo
+
+
