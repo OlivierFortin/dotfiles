@@ -19,7 +19,10 @@ npm install -g nave
 # you need the code CLI tools YOU FOOL.
 ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 
-
+# Add git open
+cd ~/bin
+curl -o ~/bin/git-open https://raw.githubusercontent.com/paulirish/git-open/master/git-open
+chmod +x ~/bin/git-open
 
 # https://github.com/rupa/z
 # z, oh how i love you
@@ -62,4 +65,8 @@ sudo easy_install Pygments
 # install yeoman 
 sudo npm install -g yo
 
+#install ngrep
+sudo port install ngrep
 
+#install maven
+sudo port install maven3
