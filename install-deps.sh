@@ -36,8 +36,6 @@ chmod +x ~/Prog/z/z.sh
 
 # https://github.com/dronir/SpotifyControl
 # Spotify Controll Script
-cd ~/Prog
-git clone git://github.com/dronir/SpotifyControl.git
 
 # https://github.com/jeroenbegyn/VLCControl
 # VLC Controll Script
@@ -61,6 +59,8 @@ sudo easy_install Pygments
 # chrome canary as default
 # on a mac you can set chrome canary as your default inside of Safari preferences :)
 
+# install pageres
+npm install --global pageres
 
 # install yeoman 
 sudo npm install -g yo
