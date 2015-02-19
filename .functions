@@ -14,14 +14,6 @@ cdf() {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
-
-# lets toss an image onto my server and pbcopy that bitch.
-function scpp() {
-    scp "$1" aurgasm@aurgasm.us:~/paulirish.com/i;
-    echo "http://paulirish.com/i/$1" | pbcopy;
-    echo "Copied to clipboard: http://paulirish.com/i/$1"
-}
-
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
 	local port="${1:-8000}"
