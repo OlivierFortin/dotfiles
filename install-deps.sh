@@ -61,3 +61,5 @@ sudo port install maven3
 
 #install basic npm file
 npm install -g grunt-cli
+npm install -g gulp-cli
+npm install -g nightwatch
