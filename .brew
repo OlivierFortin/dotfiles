@@ -33,7 +33,7 @@ brew install php
 brew install mysql
 brew install postgresql
 brew install node
-brew install mongo
+brew install mongodb
 brew cask install atom
 brew install python
 brew cask install dropbox
