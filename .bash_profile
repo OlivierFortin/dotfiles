@@ -6,7 +6,7 @@ done
 unset file
 
 # init z   https://github.com/rupa/z
-. ~/code/z/z.sh
+. ~/Prog/z/z.sh
 
 # init rvm
 source ~/.rvm/scripts/rvm
@@ -33,5 +33,5 @@ export PATH=$GRAILS_HOME:$PATH
 export GRAILS_OPTS="-XX:MaxPermSize=512m -Xmx2048M -Xms1024m"
 export ANDROID_HOME="/Users/ofortin/android-sdk-macosx"
 export ANDROID_TOOL="/Users/ofortin/android-sdk-macosx/tools"
-export ANDROID_PLATFORM_TOOL="/Users/ofortin/android-sdk-macosx/plateform-tools"                                                                                                                                
+export ANDROID_PLATFORM_TOOL="/Users/ofortin/android-sdk-macosx/plateform-tools"
 export PATH=$ANDROID_HOME:$ANDROID_TOOL:$ANDROID_PLATFORM_TOOL:$PATH

@@ -21,12 +21,18 @@ brew install wget --enable-iri
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew tap josegonzalez/homebrew-php
+brew install caskroom/cask/brew-cask
+
 
 # Install everything else
 brew install ack
 brew install git
 brew install rename
 brew install tree
-
+brew install php
+brew install mysql
+brew install postgresql
+brew install node
+brew cask install atom
 # Remove outdated versions from the cellar
 brew cleanup
