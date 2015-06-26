@@ -122,5 +122,5 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 
 # Python stuff
-alias py = "python" 
-alias penv = "source virtual/bin/activate"
+alias py="python" 
+alias penv="source virtual/bin/activate"
