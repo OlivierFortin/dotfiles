@@ -25,11 +25,7 @@ export LANG="en_US"
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
 
-
 export MV_HOME="/opt/local/share/java/maven3"
-# add grails
-export GRAILS_HOME="~/herdWisdom/grails-2.3.7/bin"
-export PATH=$GRAILS_HOME:$PATH
 export GRAILS_OPTS="-XX:MaxPermSize=512m -Xmx2048M -Xms1024m"
 export ANDROID_HOME="/Users/ofortin/android-sdk-macosx"
 export ANDROID_TOOL="/Users/ofortin/android-sdk-macosx/tools"
