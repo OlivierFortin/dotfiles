@@ -22,7 +22,7 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew tap josegonzalez/homebrew-php
 brew install caskroom/cask/brew-cask
-
+brew install ssh-copy-id
 
 # Install everything else
 brew install ack
