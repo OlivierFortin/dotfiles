@@ -38,7 +38,6 @@ brew cask install atom
 brew install python
 brew cask install dropbox
 brew cask install slack
-brew cask install google-chrome
 brew cask install iterm2
 # Remove outdated versions from the cellar
 brew cleanup
