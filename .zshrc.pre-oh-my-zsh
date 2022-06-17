@@ -1,0 +1,5 @@
+plugins=(git)
+
+
+# init z   https://github.com/rupa/z
+. ~/Prog/z/z.sh
