@@ -40,10 +40,17 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neovim/nvim-lspconfig'
-Plug 'tomasiser/vim-code-dark'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'onsails/lspkind-nvim'
+Plug 'nvim-lua/lsp_extensions.nvim'
 
-Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+Plug 'tomasiser/vim-code-dark'
+
+
+Plug 'hashivim/vim-terraform'
+
 
 
 call plug#end()
