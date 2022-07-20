@@ -51,6 +51,25 @@ require("lspconfig")['tsserver'].setup{
   flag = lsp_flags,
 }
 
+require("lspconfig")['solang'].setup{
+  on_attach = on_attach,
+  flag = lsp_flags
+}
+
+
 require("lspconfig")['html'].setup{
   capabilities = capabilities,
 }
+
+require("lspconfig")['ccls'].setup{
+  on_attach = on_attach,
+  flag = lsp_flag
+}
+
+
+require("lspconfig")['dockerls'].setup {
+  on_attach = on_attach
+}
+
+
+
