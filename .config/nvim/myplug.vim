@@ -51,6 +51,6 @@ Plug 'tomasiser/vim-code-dark'
 
 Plug 'hashivim/vim-terraform'
 
-
+Plug 'tomlion/vim-solidity'
 
 call plug#end()

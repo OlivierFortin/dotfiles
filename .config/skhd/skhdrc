@@ -1,5 +1,5 @@
 #App shortcut
-#cmd + shift - enter : open -na /Applications/iTerm.app
+hyper - t : open -na /Applications/iTerm.app
 
 # focus window
 hyper - h : yabai -m window --focus west
@@ -54,6 +54,5 @@ hyper - s  : yabai -m window --display next; yabai -m display --focus next
 
 
 # toggle window zoom
-hyper - d : yabai -m window --toggle zoom-parent
 hyper - f : yabai -m window --toggle zoom-fullscreen
-
+hyper - w : yabai -m window --grid 1:3:0:0:2:1
