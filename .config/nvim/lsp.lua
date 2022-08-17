@@ -71,5 +71,11 @@ require("lspconfig")['dockerls'].setup {
   on_attach = on_attach
 }
 
+require("lspconfig")['clangd'].setup {
+  on_attach = on_attach
+}
 
+require("lspconfig")['csharp_ls'].setup {
+  on_attach = on_attach
+}
 
