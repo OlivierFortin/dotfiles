@@ -74,7 +74,7 @@ endif
 set undofile " Persistent Undo
 set viminfo=%,'9999,s512,n~/.vim/viminfo " Restore buffer list, marks are remembered for 9999 files, registers up to 512Kb are remembered
 set visualbell " Use visual bell instead of audible bell (annnnnoying)
-
+set completeopt=menu,menuone,noselect
 
 
 " FastEscape {{{
