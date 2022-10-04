@@ -5,7 +5,7 @@ set background=dark
 syntax on
 colorscheme codedark
 
-let mapleader=","
+let mapleader=" "
 
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -97,15 +97,10 @@ augroup general_config
   nnoremap <c-e> 3<c-e>
   nnoremap <c-y> 3<c-y>
   " }}}
-
-  " faster split resizing (+,-) {{{
-  if bufwinnr(1)
-    map + <C-W>+
-    map - <C-W>-
-  endif
-  " }}}
-
   " Better split switching (Ctrl-j, Ctrl-k, Ctrl-h, Ctrl-l) {{{
+  
+ 
+
   map <C-j> <C-W>j
   map <C-k> <C-W>k
   map <C-H> <C-W>h
@@ -216,7 +211,7 @@ augroup nerd_commenter
 augroup END
 " }}}
 
- 
+nnoremap <leader>nt :NERDTreeToggle<CR>
 
 
 
@@ -351,43 +346,6 @@ augroup airline_config
 augroup END
 " }}}
 
-" CtrlP.vim {{{
-augroup ctrlp_config
-  autocmd!
-  let g:ctrlp_clear_cache_on_exit = 0 " Do not clear filenames cache, to improve CtrlP startup
-  let g:ctrlp_lazy_update = 350 " Set delay to prevent extra search
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' } " Use python fuzzy matcher for better performance
-  let g:ctrlp_match_window_bottom = 0 " Show at top of window
-  let g:ctrlp_max_files = 0 " Set no file limit, we are building a big project
-  let g:ctrlp_switch_buffer = 'Et' " Jump to tab AND buffer if already open
-  let g:ctrlp_open_new_file = 'r' " Open newly created files in the current window
-  let g:ctrlp_open_multiple_files = 'ij' " Open multiple files in hidden buffers, and jump to the first one
-augroup END
-" }}}
-
-" Silver Searcher {{{
-augroup ag_config
-  autocmd!
-
-  if executable("ag")
-    " Note we extract the column as well as the file and line number
-    set grepprg=ag\ --nogroup\ --nocolor\ --column
-    set grepformat=%f:%l:%c%m
-
-    " Have the silver searcher ignore all the same things as wilgignore
-    let b:ag_command = 'ag %s -i --nocolor --nogroup'
-
-    for i in split(&wildignore, ",")
-      let i = substitute(i, '\*/\(.*\)/\*', '\1', 'g')
-      let b:ag_command = b:ag_command . ' --ignore "' . substitute(i, '\*/\(.*\)/\*', '\1', 'g') . '"'
-    endfor
-
-    let b:ag_command = b:ag_command . ' --hidden -g ""'
-    let g:ctrlp_user_command = b:ag_command
-  endif
-augroup END
-" }}}
-
 " EasyAlign.vim {{{
 augroup easy_align_config
   autocmd!
@@ -396,11 +354,6 @@ augroup easy_align_config
 augroup END
 " }}}
 
-" Notes.vim {{{
-augroup notes_config
-  autocmd!
-  let g:notes_directories = ['~/Dropbox/Notes']
-augroup END
 " }}}
 
 " RainbowParenthesis.vim {{{
@@ -419,14 +372,11 @@ augroup syntastic_config
 augroup END
 " }}}
 
-" Start NERDTree and leave the cursor in it.
-autocmd VimEnter * NERDTree
 
 " FZF {{{
 augroup FZF_config
   autocmd!
   nnoremap <silent> <C-f> :Files<CR>
-  nnoremap <silent> <Leader>f :Rg<CR>
 augroup END
 " }}}
 
