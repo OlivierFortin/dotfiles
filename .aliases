@@ -34,11 +34,9 @@ fi
 # GIT STUFF
 
 # Undo a `git push`
-alias undopush="git push -f origin HEAD^:master"
+alias undopush="git push -f origin HEAD^:main"
 
 
-# git root
-alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -79,3 +77,4 @@ done
 # Python stuff
 alias py="python"
 alias penv="source virtual/bin/activate"
+alias grepf="~/go/bin/gf" 

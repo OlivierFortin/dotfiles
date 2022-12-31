@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/olivierfortin/.oh-my-zsh"
+export ZSH="/home/ofortin/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git brew node macos docker)
 source $ZSH/oh-my-zsh.sh
@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 source ~/.exports
 source ~/.functions
-
+source ~/bin/z.sh
 
 
 alias vol="/usr/local/Cellar/volatility/2.6.1_2/bin/vol.py"
@@ -30,9 +30,12 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 function volatility() {
   docker run --rm --user=$(id -u):$(id -g) -v "$(pwd)":/dumps:ro,Z -ti phocean/volatility $@
 }
-
-export JAVA_HOME=`/usr/libexec/java_home -v 15`
-
+export npm_config_prefix="$HOME/.local"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$PATH"
+export PATH="$PATH:/home/ofortin/.dotnet/tools"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+export QSYS_ROOTDIR="/home/ofortin/prog/pkg/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/21.1/quartus/sopc_builder/bin"
