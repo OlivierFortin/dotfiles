@@ -1,0 +1,40 @@
+snippet dTexte 
+    \begin{frame}
+        \frametitle{${1:Titre}}
+        ${0}
+    \end{frame}
+
+snippet dTitle 
+    \begin{frame}
+	\centering \Large
+	\enph{${1:Titre}}
+    \end{frame}
+
+snippet dListe 
+	\begin{frame}
+		\frametitle{${1:Titre}}
+		\begin{itemize}
+			\item ${0:Item 1}
+		\end{itemize}
+	\end{frame}
+
+snippet NewPresentation
+	\documentclass{beamer}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\title{${1:Cours}}
+	\author[OF]{Olivier Fortin \\ \texttt{Olivier.Fortin@cstjean.qc.ca}}
+	\institute[CST-Jean]{Cégep de Saint-Jean-sur-Richelieu}
+	\usetheme{CstjeanOF}
+
+	\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+
+
+	\end{document}
+
