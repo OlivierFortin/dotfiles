@@ -6,7 +6,14 @@ vim.bo.shiftwidth = 4
 -- set relavite line numbers
 vim.wo.relativenumber = true
 vim.wo.number = true
-
+vim.bo.expandtab = true
+-- show hidden characters
+vim.wo.list = true
+vim.wo.listchars = "tab:»·,trail:·,extends:→,precedes:←"
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 -- Load theme tokyo night 
 require('tokyonight').colorscheme()
 
@@ -23,4 +30,5 @@ vim.api.nvim_set_keymap('n', '<leader>nh', ':nohlsearch<CR>', { noremap = true, 
 -- toggle nerdtree
 vim.api.nvim_set_keymap('n', '<leader>nt', ':NERDTreeToggle<CR>', { noremap = true, silent = true })
 
-
+-- Open PDF of latex file
+vim.api.nvim_set_keymap('n', '<leader>lp', ':LLPStartPreview<CR>', { noremap = true, silent = true })
