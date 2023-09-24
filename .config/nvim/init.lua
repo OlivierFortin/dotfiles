@@ -24,7 +24,10 @@ plugins_list = {
 	 'tomasiser/vim-code-dark',
 	 'hashivim/vim-terraform',
 	 'christoomey/vim-tmux-navigator',
-	 { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+	 -- install tree sitter
+	 'nvim-treesitter/nvim-treesitter',
+	 'nvim-treesitter/nvim-treesitter-textobjects',
+	 'nvim-treesitter/nvim-treesitter-refactor',
 	 'lervag/vimtex',
 	 {'xuhdev/vim-latex-live-preview' },
 	 'neovim/nvim-lspconfig',
