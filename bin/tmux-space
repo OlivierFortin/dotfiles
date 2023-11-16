@@ -3,7 +3,14 @@
 # Change for my setup
 #
 if [[ $# -eq 1 ]]; then
-    selected=$1
+    # check if param is -o
+    if [[ $1 == "-o" ]]; then
+        #Get all tmux sessions
+        selected=$(tmux ls | awk -F: '{print $1}' | fzf)
+    else
+        selected=$1
+    fi
+
 else
     selected=$(find ~/prog ~/NSEC2023  ~/ctf   -mindepth 1 -maxdepth 2 -type d | fzf)
 
