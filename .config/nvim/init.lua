@@ -1,5 +1,3 @@
-
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -33,7 +31,7 @@ plugins_list = {
 	 'neovim/nvim-lspconfig',
 	 'williamboman/mason.nvim',
 	 'williamboman/mason-lspconfig.nvim',
-	 'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
 	 'jay-babu/mason-null-ls.nvim',
 	 'dgagn/diagflow.nvim' ,
 	 { 'j-hui/fidget.nvim', tag = 'legacy' },

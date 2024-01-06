@@ -3,7 +3,7 @@
 vim.bo.tabstop = 4
 vim.bo.shiftwidth = 4
 vim.bo.expandtab = true
-
+vim.g.editorconfig = true
 -- set relavite line numbers
 vim.wo.relativenumber = true
 vim.wo.number = true
@@ -27,6 +27,14 @@ vim.wo.wrap = false
 vim.cmd('set guifont=FiraCode\\ Nerd\\ Font:h12')
 -- Remap
 vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
+
+-- Copy to clipboard
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true })
+-- Paste from clipboard
+vim.api.nvim_set_keymap('n', '<leader>p', '"+p', { noremap = true })
+
+
+
 vim.api.nvim_set_keymap('n','<leader><enter>', 'o<Esc>', { noremap = true })
 
 -- Reload nvim config 
@@ -42,4 +50,14 @@ vim.api.nvim_set_keymap('n', '<leader>nt', ':NERDTreeToggle<CR>', { noremap = tr
 vim.api.nvim_set_keymap('n', '<leader>lp', ':LLPStartPreview<CR>', { noremap = true, silent = true })
 
 
--- configure Powerline
+-- move lines up and down 
+vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<A-j>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<A-k>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<A-j>', ':m \'>+1<CR>gv=gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<A-k>', ':m \'<-2<CR>gv=gv', { noremap = true, silent = true })
+
+
+-- quick save   
+vim.api.nvim_set_keymap('n', '<leader>ww', ':w<CR>', { noremap = true, silent = true })
