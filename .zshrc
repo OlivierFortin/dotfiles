@@ -16,11 +16,16 @@ export USER_HOME="/home/ofortin/"
 export GHIDRA_INSTALL_DIR="/opt/ghidra/"
 # User configuration
 source ~/.aliases
+
 source ~/.exports
 source ~/.functions
 source ~/bin/z.sh
 
-
+# encrypt with rot13 string
+#
+function encrypt() {
+    echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+}
 export TEXMFHOME="/home/ofortin/texmf"
 
 alias vol="/usr/local/Cellar/volatility/2.6.1_2/bin/vol.py"
@@ -56,3 +61,5 @@ PERL5LIB="/home/ofortin/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5L
 PERL_LOCAL_LIB_ROOT="/home/ofortin/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/ofortin/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ofortin/perl5"; export PERL_MM_OPT;
+
+unset npm_config_prefix

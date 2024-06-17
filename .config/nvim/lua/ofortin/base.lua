@@ -61,3 +61,14 @@ vim.api.nvim_set_keymap('v', '<A-k>', ':m \'<-2<CR>gv=gv', { noremap = true, sil
 
 -- quick save   
 vim.api.nvim_set_keymap('n', '<leader>ww', ':w<CR>', { noremap = true, silent = true })
+
+-- Telescope
+vim.api.nvim_set_keymap('n', '<leader>tf', ':Telescope find_files<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>tg', ':Telescope live_grep<CR>', { noremap = true, silent = true })
+
+-- Toggle Precognition
+vim.api.nvim_set_keymap('n', '<leader>tp', ':lua require("precognition").toggle()<CR>', { noremap = true, silent = true })
+
+
+
+

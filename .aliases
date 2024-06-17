@@ -17,10 +17,10 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -l ${colorflag}"
+alias ll="eza"
 
 # List all files colorized in long format, including dot files
-alias la="ls -la ${colorflag}"
+alias la="eza -la"
 
 # Always use color output for `ls`
 if [[ "$OSTYPE" =~ ^darwin ]]; then
@@ -39,7 +39,7 @@ alias undopush="git push -f origin HEAD^:main"
 
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
@@ -78,3 +78,11 @@ done
 alias py="python"
 alias penv="source virtual/bin/activate"
 alias grepf="~/go/bin/gf" 
+
+
+
+alias Writer="~/prog/libreoffice/instdir/program/swriter"
+alias Calc="~/prog/libreoffice/instdir/program/scalc"
+alias Impress="~/prog/libreoffice/instdir/program/simpress"
+
+
